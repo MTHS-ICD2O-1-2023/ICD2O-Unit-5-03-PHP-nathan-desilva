@@ -30,7 +30,7 @@
         <img src="./images/movie_ratings.jpg" alt="movie_ratings" width="250" />
       </div>
       <div class="page-content-php">
-        <div name="number-guessed">
+        <div name="age-entered">
           <div class="mdl-layout__header-row">
             <br />
             <div class="mdl-layout__content">
@@ -38,18 +38,22 @@
             <div class="mdl-layout__left">
               <?php
 
-              $positiveButton = $_POST["options"];
-              $randomNumber = floor(rand(1, 6));
-              $randomNegativeNumber = floor(rand(1, 6)) * -1;
+              $age = $_POST["age-entered"];
 
               // process
-              if ($positiveButton == true) {
+              if ($age >= 17) {
                 // output
-                echo "You selected Positive and your number is: " . $randomNumber . ".";
+                echo "You are " . $age . " so you can watch an R rated movie alone.";
                 //process
-              } elseif ($positiveButton == false) {
+              } elseif ($age >= 13) {
                 // output
-                echo "You selected Negative and your number is: " . $randomNegativeNumber . ". ";
+                echo "You are " . $age . " so you can watch a PG-13 movie alone.";
+              } elseif ($age >= 9) {
+                // output
+                echo "You are " . $age . " so you can watch a G or PG rated movie alone.";
+              } elseif ($age >= 6) {
+                // output
+                echo "You are " . $age . " so you can watch a G rated movie alone.";
               }
 
               ?>
