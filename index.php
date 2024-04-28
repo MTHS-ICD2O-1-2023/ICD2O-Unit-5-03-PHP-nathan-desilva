@@ -29,19 +29,15 @@
       <div class="right-image">
         <img src="./images/movie_ratings.jpg" alt="movie_ratings" width="250" />
       </div>
-      <h3>Select Positive or Negative.
+      <h3>Enter in your age.
       </h3>
       <div class="page-content-php">
         <form action="answer.php" method="POST">
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="positive">
-            <input type="radio" id="positive" class="mdl-radio__button" name="options" value="1" checked>
-            <span class="mdl-radio__label">Positive</span>
-          </label>
-          <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="negative">
-            <input type="radio" id="negative" class="mdl-radio__button" name="options" value="0">
-            <span class="mdl-radio__label">Negative</span>
-          </label>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="age-entered">
+            <label class="mdl-textfield__label" for="age-entered">Enter a number ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
           <br />
           <br />
           <!-- Accent-colored raised button with ripple -->
