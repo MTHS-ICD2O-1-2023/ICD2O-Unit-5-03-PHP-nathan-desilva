@@ -29,7 +29,7 @@
       <div class="right-image">
         <img src="./images/movie_ratings.jpg" alt="movie_ratings" width="250" />
       </div>
-      <h3>Enter in your age.
+      <h3>Enter your age.
       </h3>
       <div class="page-content-php">
         <form action="answer.php" method="POST">
